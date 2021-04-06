@@ -586,11 +586,11 @@
         $('div .container-info').append(`
              <div class="header">
                 <img id="img-info" class="info-img" src="images/${albumsInfo[album]['img']}">
-                <div style="margin-left: 1em">
-                    <h2 id="titulo-info">${albumsInfo[album]['titulo']}</h2>
-                    <h4 id="ano-musicas-info" style="color: lightgrey">${albumsInfo[album]['ano']} &bull; ${albumsInfo[album]['qtd_musicas']} músicas</h4>
-                    <div style="display: flex; align-items: center">
-                        <i class="fas fa-award" style="color: white"></i>
+                <div style="display:flex; flex-direction: column; margin-left: 1em">
+                    <span id="titulo-info" style="font-size: 1.5vw; padding-top: .5em">${albumsInfo[album]['titulo']}</span>
+                    <span id="ano-musicas-info" style="font-size: .8vw; color: white;">${albumsInfo[album]['ano']} &bull; ${albumsInfo[album]['qtd_musicas']} músicas</span>
+                    <div style="display: flex; align-items: center; padding-top: .5em">
+                        <i class="fas fa-award" style="color: white; font-size: .8vw;"></i>
                         <span id="premios-info" style="margin-left: .5em; font-size: .8vw; color: white">${albumsInfo[album]['premios']}</span>
                     </div>
                 </div>
@@ -600,19 +600,19 @@
                 <p id="historia-info" style="line-height: 1.6; font-size: .8vw;">${albumsInfo[album]['historia']}</p>
             </div>
             <div class="reference">
-                <a href="${albumsInfo[album]['ref']}" target="_blank" style="background: lightgrey; padding: .5em 1em; color: #000; border-radius: 1em; text-decoration: none; font-weight: bold; font-size: 12px">Referência</a>
+                <a href="${albumsInfo[album]['ref']}" target="_blank" style="background: lightgrey; padding: .5em 1em; color: #000; border-radius: 1em; text-decoration: none; font-weight: bold; font-size: .8vw">Referência</a>
             </div>
             <div class="footer">
-                <h4>Escute um trecho:</h4>
-                <div style="display: flex; margin-bottom: 1em; align-items: center">
-                    <i class="fas fa-music" style="color: white"></i>
+                <span style="font-size: 1vw;">Escute um trecho:</span>
+                <div style="display: flex; padding-top: .5em; margin-bottom: 1em; align-items: center">
+                    <i class="fas fa-music" style="color: white; font-size: .8vw;"></i>
                     <span style="font-size: .8vw; margin-left: .5em;">${albumsInfo[album]['musica']}</span>
                 </div>
                 <audio controls>
                     <source id="musica-info" src="audio/${albumsInfo[album]['musica']}.mp3" type="audio/mpeg">
                 </audio>
             </div>
-            <div id="start-back-button" class="back-button start-back-button" onclick="scrollToStart()">VOLTAR</div>
+            <div id="start-back-button" class="back-button start-back-button" onclick="scrollToStart()" style="font-size: .8vw;">VOLTAR</div>
         `)
     }
 </script>
